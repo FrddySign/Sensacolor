@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio</title>
+    <title>SensaColor</title>
     <link rel="shortcut icon" href="./img/favicon.ico">
     <link rel="stylesheet" href="./css/estilos.css">
     <script src="https://kit.fontawesome.com/e7fc1e4d90.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 <body>
+  <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="./index.html">
@@ -28,6 +29,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="./view/paletas.html">Paletas</a>
               </li>
+              
               <li class="nav-item dropdown">
                 <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Informacion
@@ -44,18 +46,24 @@
             </form>
           </div>
         </div>
-      </nav>
+    </nav>
+  </header>
     <div class="container">
         <h2>
             Busca el color
         </h2>
-        <span class="color-hex-bga-hsl">#FF0000</span>
+        <span class="color-hex-bga-hsl">#FFFFFF</span>
+
         <div class="btns">
             <button id="reset">Resetear</button>
             <button id="generate">Generar</button>
+            <button id="favoritos">❤</button>
+            <abbr title="Si tienes Miopia, Tritanopía colocamos informacion detallada del color.">?</abbr>
         </div>
-
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./main.js/main.js"></script>
+
+    
 </body>
-<script src="./main.js/main.js"></script>
 </html>

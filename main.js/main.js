@@ -13,8 +13,55 @@ document.addEventListener('click', e =>{
         $showColor.innerHTML = color;
         document.body.style.background = color;
     }
+    if (e.target === $reset){
+        $showColor.innerHTML = "#FFFFFF";
+        document.body.style.background = "#FFFFFF";
+    }
 })
 
 function randomNumber(){
-    return Math.floor(Math.random()*hex.length)
+    return Math.floor(Math.random() *hex.length)
 }
+
+//Btn favoritos con Localstorage
+const favoriteButton = document.getElementById("favoritos");
+const storageKey = "favoritos";
+
+favoriteButton.addEventListener("click", function() {
+
+const storage = localStorage.getItem(storageKey);
+
+const currentFavorites = storage ? JSON.parse(storage): [];
+
+currentFavorites.push(  
+    { url: window.location.href, 
+    title: document.title}
+    );
+
+localStorage.setItem(storageKey, JSON.stringify(currentFavorites));
+
+favoriteButton.innerText = "❤";
+});
+
+//Funcion de boton de favoritos con libreria
+document.getElementById("favoritos");
+
+document.addEventListener('click', () =>{
+
+    const favoritos = document.getElementById("favoritos");
+    favoritos.onclick = function(){
+Swal.fire({
+    title: '¿Quieres agregar el color a favorito?',
+    showDenyButton: true,
+    showCancelButton: true,
+    confirmButtonText: 'Guardar',
+    denyButtonText: `Descartar`,
+    }).then((result) => {
+    if (result.isConfirmed) {
+        Swal.fire('Saved!', '', 'success')
+        } else if (result.isDenied) {
+        Swal.fire('Changes are not saved', '', 'info')
+        }
+    })
+}
+})

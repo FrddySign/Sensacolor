@@ -2,13 +2,13 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Georgia, Times, 'Times New Roman', serif;
 }
 :root{
     --bg-color: #303134;
     --color-text: #ffffff;
     --box-shadow: 5px 5px 5px 0 rgb(32,33,36,1),
-                  -1px -1px 4px 0 rgb(32,33,36,1);
+                -1px -1px 4px 0 rgb(32,33,36,1);
 }
 body{
     display: grid;
@@ -30,14 +30,14 @@ body{
     padding: 1rem;
     background-color: var(--bg-color);
 }
-.colorhex,
+.color-hex-bga-hsl,
 .btns *{
     background-color: var(--bg-color);
     box-shadow: var(--box-shadow);
     border-radius: .5rem;
     padding: .5rem 1rem;
 }
-.color-hex{
+.color-hex-bga-hsl{
     font-weight: 600;
     letter-spacing: 3px;
     font-size: 1.5rem;
@@ -57,6 +57,8 @@ body{
     padding: 5px;
     flex: 25%;
 }
+
+
 
 @media screen and (max-width:750px) {
     .container{
