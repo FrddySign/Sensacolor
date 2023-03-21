@@ -23,7 +23,7 @@ function randomNumber(){
     return Math.floor(Math.random() *hex.length)
 }
 
-//Btn favoritos con Localstorage
+
 const favoriteButton = document.getElementById("favoritos");
 const storageKey = "favoritos";
 
@@ -43,7 +43,7 @@ localStorage.setItem(storageKey, JSON.stringify(currentFavorites));
 favoriteButton.innerText = "❤";
 });
 
-//Funcion de boton de favoritos con libreria
+
 document.getElementById("favoritos");
 
 document.addEventListener('click', () =>{
